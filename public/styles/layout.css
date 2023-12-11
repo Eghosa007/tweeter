@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+/* Global box-sizing */
 html {
   box-sizing: border-box;
 }
@@ -10,16 +6,51 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
+/* Body styling */
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #545149; /* Text color for the body */
+  background-color: rgb(248, 248, 247); /* Replace with your desired body background color */
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url('/images/binding-dark.png'); /* Update the path to your image */
+  background-repeat: repeat; /* Adjust as needed (repeat, repeat-x, repeat-y, no-repeat) */
+  background-size: cover; /* Adjust as needed (cover, contain) */
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* Main container styling */
+main {
+  width: 90%;
+  margin: 0 auto; /* Centers the main container */
+  background-color: inherit; /* Inherits the body's background color */
+  padding: 20px; /* Add padding for spacing inside the main container */
+}
+
+/* Nav and other component styles */
+nav .tweeter-logo {
+  font-family: 'Bungee', sans-serif;
+}
+
+.new-tweet-container {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  margin: 5px;
+  color: white;
+}
+
+.new-tweet-container i {
+  color: red; /* Set the color to red */
+  display: block; /* Make the icon a block element to position it below the text */
+  margin-left: 80px; /* Add margin to separate the text and the icon */
+}
+
+.avatar-container {
+  text-align: center;
+}
+
+.name-container {
+  text-align: center;
+}
+
+/* Additional styles for tweets, if any */
+/* Add specific styling for tweets here to prevent inheritance from body or header */

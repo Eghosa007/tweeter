@@ -1,0 +1,158 @@
+/* tweet.css */
+
+.new-tweet {
+    /* Add styles to position the elements as described */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  h2 {
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Add some space between "What are you humming about" and the line */
+  }
+  
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: #eeece7; /* Adjust the color of the line as needed */
+    margin-bottom: 10px; /* Add some space between the line and the button */
+  }
+  
+  .tweet-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  button {
+    background-color: #007BFF; /* Set the button background color to blue */
+    color: #faf8f8; /* Set the text color to white */
+    padding: 5px 10px; /* Adjust the padding of the button as needed */
+    border: none;
+    cursor: pointer;
+  }
+  
+  textarea {
+    /* Add styles for the text box/field */
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  .counter {
+    display: block; /* Make the counter a block element for better alignment */
+    text-align: border right; /* Align the counter text to the right */
+    margin-top: 50px; /* Add some top margin for separation */
+    margin-right: 10px; /* Increase right margin to move text further right */
+    color: #007BFF; /* Set the counter text color to blue */
+    font-weight: bold;
+  }
+  
+  
+  .error-message {
+    color: red; /* Set the color of the error message text */
+    margin-top: 10px; /* Add some top margin for separation */
+  }
+  
+  /* Add a thick line under the label and textarea */
+  label,
+  textarea {
+    border-bottom: 2px solid #000000; /* Set a thick border at the bottom */
+    padding-bottom: 10px; /* Add some bottom padding for separation */
+    margin-bottom: 20px; /* Add additional bottom margin for spacing */
+  }
+  
+  .counter.exceeded {
+    color: red;
+  }
+  /* Additions for tweet header layout */
+  .tweet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tweet-header .avatar {
+    width: 50px;  /* Example size, adjust as needed */
+    height: 50px; /* Example size, adjust as needed */
+    border-radius: 50%;
+    /* Add any additional styling for the avatar */
+  }
+  
+  .tweet-header .name {
+    /* Add styling for the name */
+    margin-left: 100px; /* Space between avatar and name */
+  }
+  
+  .tweet-header .handle {
+    margin-left: auto; /* Pushes the handle to the right */
+    /* Add any additional styling for the handle */
+  }
+  
+  .counter.exceeded {
+    color: red; /* Color for exceeded character count */
+  }
+  
+  .tweet-header {
+    height: 200px; /* Adjust height as needed */
+    width: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/nistri.png");
+    background-color: rgba(251, 253, 253, 0);
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Vertical center alignment */
+    justify-content: flex-start; /* Align children to the start (left) */
+    padding: 10px; /* Padding around the content */
+  }
+  
+  /* Assuming your handle has a class like .tweet-handle */
+  .tweet-header .tweet-handle {
+    margin-left: auto; /* Pushes the handle to the right */
+    /* Additional styling for handle */
+  }
+  
+  
+  .avatar {
+    width: 40px; /* Example size, adjust as needed */
+    height: 40px; /* Example size, adjust as needed */
+    border-radius: 50%;
+    margin-left: 10px; /* Space between avatar and name */
+  }
+  
+  .name {
+    /* Styling for the name */
+    width: 40px; /* Example size, adjust as needed */
+    height: 40px; /* Example size, adjust as needed */
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .handle {
+    margin-left: auto; /* Pushes the handle to the right */
+    /* Additional styling for the handle */
+  }
+  
+  .tweet {
+    /* Your existing styles for tweet */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+  }
+  
+  
+  /* Hover state */
+  .tweet:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Example box shadow, adjust as needed */
+  }
+  
+  /* Example assuming your icons have classes .icon-flag, .icon-retweet, and .icon-like */
+  
+  .icon-flag:hover,
+  .icon-retweet:hover,
+  .icon-like:hover {
+    color: #1da0f24f; /* Change the color as per your preference */
+  }
+  

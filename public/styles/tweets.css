@@ -1,0 +1,42 @@
+#tweets-container {
+    /* Add styles for the tweets container */
+  }
+  
+  .tweet {
+    border: 1px solid #e6ecf0;
+    padding: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  .tweet:hover {
+    box-shadow: 0 8px 6px -6px grey;
+  }
+  
+  .tweet header, .tweet footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tweet-icons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .tweet:hover .tweet-icons {
+    display: flex;
+  }
+  
+  .tweet-icons i {
+    cursor: pointer;
+  }
+  
+  .tweet:hover .tweet-icons i {
+    color: #1da1f2; /* example color */
+  }
+  
+  /* Any other styles you want to add for your tweet elements */
+  
