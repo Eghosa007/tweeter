@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+- ## Screenshots
+- !["Screenshot of tweets compose box"](https://github.com/Eghosa007/tweeter/blob/master/docs/tweet-area.png)
+- ![Screenshot of tweets"](https://github.com/Eghosa007/tweeter/blob/master/docs/tweeter-user.png)
+- !["Screenshot of tweeter header"](https://github.com/Eghosa007/tweeter/blob/master/docs/tweeter-header.png)
