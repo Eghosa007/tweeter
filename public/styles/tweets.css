@@ -1,18 +1,27 @@
 #tweets-container {
     /* Add styles for the tweets container */
-  }
+
+    width: 100%; /* Set the width to 100% to make it stretch across the page */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin: 0; /* Remove any default margin */
+    padding: 20px; /* Add padding as needed */
+}
+
+  
   
   .tweet {
     border: 1px solid #e6ecf0;
     padding: 20px;
     margin-bottom: 10px;
-    position: relative;
+    position: static;
     background: #fff;
     border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+
   }
   
   .tweet:hover {
-    box-shadow: 0 8px 6px -6px grey;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
   }
   
   .tweet header, .tweet footer {
@@ -34,9 +43,26 @@
     cursor: pointer;
   }
   
-  .tweet:hover .tweet-icons i {
-    color: #1da1f2; /* example color */
-  }
   
   /* Any other styles you want to add for your tweet elements */
   
+  /* Example assuming your icons have classes .icon-flag, .icon-retweet, and .icon-like */
+  .tweet-icons .icon-flag:hover,
+  .tweet-icons .icon-retweet:hover,
+  .tweet-icons .icon-like:hover {
+      color: #fc22064f; /* Change the color as per your preference */
+  }
+  .tweet-icons i:hover {
+    color: #f7130b; /* Change the color as per your preference */
+  }
+  
+
+  #tweet-form {
+    width: 100%;
+    /* Add other styles as needed */
+  }
+
+  .container {
+    width: 100%;
+    /* Add other styles as needed */
+  }

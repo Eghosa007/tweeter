@@ -19,10 +19,13 @@ body {
 
 /* Main container styling */
 main {
-  width: 90%;
-  margin: 0 auto; /* Centers the main container */
+  width: 100%;
+  margin: 0; /* Centers the main container */
   background-color: inherit; /* Inherits the body's background color */
-  padding: 20px; /* Add padding for spacing inside the main container */
+  padding: 0; /* Add padding for spacing inside the main container */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 /* Nav and other component styles */
@@ -36,6 +39,7 @@ nav .tweeter-logo {
   right: 24px;
   margin: 5px;
   color: white;
+  width: 100%;
 }
 
 .new-tweet-container i {
@@ -54,3 +58,21 @@ nav .tweeter-logo {
 
 /* Additional styles for tweets, if any */
 /* Add specific styling for tweets here to prevent inheritance from body or header */
+.error-message-container {
+  display: none; /* Hide by default */
+  background-color: #ffcccc; /* Example error message background color */
+  color: #cc0000; /* Example error message text color */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Style for the error message text */
+.error-message {
+  margin: 0;
+  font-weight: bold;
+}
+
+.new-tweet-link .fas.fa-angle-double-down {
+  color: red; /* Set the color to red or any other color you prefer */
+}

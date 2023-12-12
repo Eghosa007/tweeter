@@ -57,13 +57,15 @@ $(document).ready(function () {
     // Function to display an error message
     function displayError(message) {
         const errorContainer = $(".new-tweet .error-message");
-        errorContainer.text(message).slideDown();
+        errorContainer.text(message);
+        errorContainer.parent().slideDown(); // Slide down the error message container
     }
 
     // Function to clear any existing error messages
     function clearError() {
         const errorContainer = $(".new-tweet .error-message");
         errorContainer.text('').slideUp();
+        errorContainer.parent().slideUp();
     }
 
     // Function to update counter color based on characters remaining
@@ -112,5 +114,14 @@ $(document).ready(function () {
     
       // Call loadTweets on page load to populate tweets
       loadTweets();
+    });
+
+
+    $(document).ready(function () {
+        // When the "Write a new tweet" link is clicked
+        $(".new-tweet-link").on("click", function () {
+          // Focus on the tweet-text textarea
+          $("#tweet-text").focus();
+        });
     });
     

@@ -4,7 +4,8 @@
     /* Add styles to position the elements as described */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-content: space-around;
+    width: 100%;
   }
   
   h2 {
@@ -21,7 +22,7 @@
   
   .tweet-controls {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
   
@@ -36,17 +37,20 @@
   textarea {
     /* Add styles for the text box/field */
     width: 100%;
-    height: 100px; /* Adjust the height as needed */
-    padding: 10px;
-    box-sizing: border-box;
+    border: none;
+    border-bottom: 10px solid #000;
+    resize: none;
+    height: 20px;
+    font-size: 16px;
+    padding: 5px;
   }
   
   
   .counter {
-    display: block; /* Make the counter a block element for better alignment */
-    text-align: border right; /* Align the counter text to the right */
-    margin-top: 50px; /* Add some top margin for separation */
-    margin-right: 10px; /* Increase right margin to move text further right */
+    display: inline-block; /* Make the counter a block element for better alignment */
+    justify-content: space-between; /* Align the counter text to the right */
+    margin-top: 10px; /* Add some top margin for separation */
+    margin-left: 90%; /* Increase right margin to move text further right */
     color: #007BFF; /* Set the counter text color to blue */
     font-weight: bold;
   }
@@ -63,6 +67,7 @@
     border-bottom: 2px solid #000000; /* Set a thick border at the bottom */
     padding-bottom: 10px; /* Add some bottom padding for separation */
     margin-bottom: 20px; /* Add additional bottom margin for spacing */
+    width: 100%;
   }
   
   .counter.exceeded {
@@ -84,7 +89,7 @@
   
   .tweet-header .name {
     /* Add styling for the name */
-    margin-left: 100px; /* Space between avatar and name */
+    margin-left: 1px; /* Space between avatar and name */
   }
   
   .tweet-header .handle {
@@ -126,10 +131,8 @@
   
   .name {
     /* Styling for the name */
-    width: 40px; /* Example size, adjust as needed */
-    height: 40px; /* Example size, adjust as needed */
-    border-radius: 50%;
-    margin-left: 10px;
+    font-size: 16px; /* Adjust font size as needed */
+    margin-bottom: 5px; /* Add margin between avatar and name */
   }
   
   .handle {
@@ -150,9 +153,8 @@
   
   /* Example assuming your icons have classes .icon-flag, .icon-retweet, and .icon-like */
   
-  .icon-flag:hover,
-  .icon-retweet:hover,
-  .icon-like:hover {
-    color: #1da0f24f; /* Change the color as per your preference */
+  .fas.fa-flag:hover,
+  .fas.fa-retweet:hover,
+  .fas.fa-heart:hover {
+    color: rgba(248, 7, 7, 0.911); /* Change the color as per your preference */
   }
-  
