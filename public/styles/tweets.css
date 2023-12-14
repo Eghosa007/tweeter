@@ -5,6 +5,7 @@
     box-sizing: border-box; /* Include padding and border in the element's total width */
     margin: 0; /* Remove any default margin */
     padding: 20px; /* Add padding as needed */
+    
 }
 
   
@@ -58,11 +59,7 @@
   
 
   #tweet-form {
-    width: 100%;
-    /* Add other styles as needed */
-  }
-
-  .container {
-    width: 100%;
+    width: 90%;
+    margin-bottom: 20px;
     /* Add other styles as needed */
   }

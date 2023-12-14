@@ -1,35 +1,28 @@
+/* nav.css */
+
 nav {
     height: 120px;
     width: 100%;
     background-color: #4056A1;
     color: #FFFFFF;
-    padding: 0 1.5em; /* 1.5ems of space on the right and left */
+    padding: 1.5em; /* 1.5ems of space on the right and left */
     display: flex;
     align-items: center; /* To vertically center the content */
     justify-content: space-between; /* To position content on right and left */
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #4056A1;
-    color: #FFFFFF;
-    padding: 10px;
-    z-index: 1000; /* Ensure nav stays on top */
-}
-
-nav span {
+  }
+  
+  nav span {
     font-family: 'Bungee', sans-serif;
-}
-
-.new-tweet-link {
+  }
+  
+  .new-tweet-link {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.new-tweet-link i {
+  }
+  
+  .new-tweet-link i {
     margin-top: 5px; /* Spacing between text and icon */
-}
+  }
+  

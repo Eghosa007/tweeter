@@ -11,31 +11,6 @@ $(document).ready(function () {
         clearError(); // Clear error when user types
     });
 
-    $(".new-tweet form").on('submit', function (event) {
-        event.preventDefault();
-        const tweetContent = $(this).find('textarea').val();
-        const errorMessage = validateTweet(tweetContent);
-
-        if (errorMessage) {
-            displayError(errorMessage);
-            return; // Stop the form submission if there is an error
-        } 
-
-        clearError();
-        $.ajax({
-            url: '/tweets',
-            method: 'POST',
-            data: { text: tweetContent }
-        }).done(() => {
-            displaySuccess('Tweet posted successfully');
-            loadTweets(); // Refresh the tweets
-            $(this).find('textarea').val('');
-            $(this).find('.counter').text(MAX_CHARACTERS);
-        }).fail((error) => {
-            displayError(error.responseText || "An error occurred while posting the tweet.");
-        });
-    });
-
     // Additional functions
     function updateCounterColor(counter, remaining) {
         counter.toggleClass('exceeded', remaining < 0);
@@ -64,4 +39,27 @@ $(document).ready(function () {
         const errorContainer = $(".new-tweet .error-message");
         errorContainer.text('').slideUp();
     }
+
+    // When the "Write a new tweet" link is clicked
+    $(".new-tweet-link").on("click", function () {
+        // Focus on the tweet-text textarea
+        $("#tweet-text").focus();
+    });
+
+    // Event listener for textarea input
+    $('#tweet-text').on('input', function () {
+        const tweetLength = $(this).val().length;
+        const remaining = MAX_CHARACTERS - tweetLength;
+        const counter = $('.counter');
+        counter.text(remaining);
+        updateCounterColor(counter, remaining);
+
+        // Check if the tweet exceeds the character limit
+        const errorMessage = validateTweet($(this).val());
+        if (errorMessage) {
+            displayError(errorMessage);
+        } else {
+            clearError();
+        }
+    });
 });

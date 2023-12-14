@@ -14,18 +14,34 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   background-image: url('/images/binding-dark.png'); /* Update the path to your image */
   background-repeat: repeat; /* Adjust as needed (repeat, repeat-x, repeat-y, no-repeat) */
-  background-size: cover; /* Adjust as needed (cover, contain) */
+  background-size: contain; /* Adjust as needed (cover, contain) */
+
 }
 
 /* Main container styling */
+header {
+  height: 500px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: orange; /* Replace with your chosen color */
+  margin-top: 150px; /* Adjust based on the height of your nav bar */
+  margin-left: 30px;
+}
+
 main {
-  width: 100%;
-  margin: 0; /* Centers the main container */
+  width: 48%;
   background-color: inherit; /* Inherits the body's background color */
-  padding: 0; /* Add padding for spacing inside the main container */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-direction: column;
+  margin-left: 45%;
+  margin-top: -18%;
+  
+
 }
 
 /* Nav and other component styles */
@@ -34,18 +50,17 @@ nav .tweeter-logo {
 }
 
 .new-tweet-container {
-  position: absolute;
   top: 20px;
   right: 24px;
   margin: 5px;
   color: white;
-  width: 100%;
+  width: 48%;
 }
 
 .new-tweet-container i {
   color: red; /* Set the color to red */
   display: block; /* Make the icon a block element to position it below the text */
-  margin-left: 80px; /* Add margin to separate the text and the icon */
+  margin-left: 90px; /* Add margin to separate the text and the icon */
 }
 
 .avatar-container {
@@ -76,3 +91,22 @@ nav .tweeter-logo {
 .new-tweet-link .fas.fa-angle-double-down {
   color: red; /* Set the color to red or any other color you prefer */
 }
+
+/* Styles for desktop (1024px and above) */
+@media screen and (min-width: 1024px) {
+  /* Keep existing styles for desktop */
+}
+
+/* Styles for tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  main {
+    width: 80%; /* Adjust width for better readability on tablets */
+    margin-left: 10%; /* Center the main content */
+  }
+  
+  header {
+    width: 80%; /* Adjust width for better readability on tablets */
+    margin-left: 10%; /* Center the header */
+  }
+}
+
